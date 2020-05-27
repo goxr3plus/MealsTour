@@ -3,14 +3,18 @@ import { View, Text, StyleSheet } from 'react-native'
 
 const FavoritesScreen = (props) => {
    return (
-      <View style={styles.container}>
+      <View style={styles.screen}>
          <Text></Text>
       </View>
    )
 }
 
 const styles = StyleSheet.create({
-   container: {},
+   screen: {
+      flex: 1,
+      justifyContent: 'center',
+      alignContent: 'center',
+   },
 })
 
 export default FavoritesScreen
