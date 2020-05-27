@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const HomeScreen = (props) => {
+const CategoriesScreen = (props) => {
    return (
       <View style={styles.screen}>
-         <Text></Text>
+         <Text>Categories Screen2 !</Text>
       </View>
    )
 }
@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
    screen: {
       flex: 1,
       justifyContent: 'center',
-      alignContent: 'center',
+      alignItems: 'center',
    },
 })
 
-export default HomeScreen
+export default CategoriesScreen

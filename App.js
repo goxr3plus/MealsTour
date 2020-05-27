@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import * as Font from 'expo-font'
 import { AppLoading } from 'expo'
+import MealsNavigator from './src/navigation/MealsNavigator'
 
 const fetchFonts = () => {
    return Font.loadAsync({
@@ -10,18 +11,14 @@ const fetchFonts = () => {
    })
 }
 
-const MealDetailsScreen = (props) => {
+const App = (props) => {
    const [fontLoaded, setFontLoaded] = useState(false)
 
    if (!fontLoaded) {
       return <AppLoading startAsync={fetchFonts} onFinish={() => setFontLoaded(true)} />
    }
 
-   return (
-      <View style={styles.screen}>
-         <Text style={{ fontFamily: 'open-sans-bold' }}>FUCK YEAH BRO!!!</Text>
-      </View>
-   )
+   return <MealsNavigator></MealsNavigator>
 }
 
 const styles = StyleSheet.create({
@@ -32,4 +29,4 @@ const styles = StyleSheet.create({
    },
 })
 
-export default MealDetailsScreen
+export default App
