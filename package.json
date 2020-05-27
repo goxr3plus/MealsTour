@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "expo": "~37.0.12",
+    "expo-font": "^8.1.1",
     "react": "~16.13.1",
     "react-dom": "~16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
