@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, StyleSheet, Text, View, Platform } from 'react-native'
-import Colors from '../constants/Colors'
+import Colors from '../utils/constants/Colors'
 
 const CategoryMealsScreen = (props) => {
    return (

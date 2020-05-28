@@ -1,7 +1,6 @@
 import React from 'react'
-import { FlatList, StyleSheet, Text, TouchableOpacity, View, Platform } from 'react-native'
-import { CATEGORIES } from './../data/dummy-data'
-import Colors from '../constants/Colors'
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { CATEGORIES } from './../utils/data/dummy-data'
 
 const CategoriesScreen = (props) => {
    const renderGridItem = ({ item }) => {
