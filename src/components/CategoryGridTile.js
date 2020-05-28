@@ -4,9 +4,9 @@ import { StyleSheet, Text, TouchableOpacity, View, Platform, TouchableNativeFeed
 const CategoryGridTile = (props) => {
    let TouchableComp = TouchableOpacity
 
-   if (Platform.OS == 'android' && Platform.Version > 21) {
-      TouchableComp = TouchableNativeFeedback //Native Android Ripple Effect
-   }
+   // if (Platform.OS == 'android' && Platform.Version > 21) {
+   //    TouchableComp = TouchableNativeFeedback //Native Android Ripple Effect
+   // }
 
    return (
       <View style={styles.grid}>

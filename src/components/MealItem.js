@@ -35,7 +35,6 @@ const MealItem = (props) => {
 const styles = StyleSheet.create({
    container: {
       height: 200,
-      width: '100%',
       marginVertical: 2,
       borderRadius: 10,
       overflow: 'hidden',

@@ -5,10 +5,14 @@ const MealDetailsScreen = (props) => {
    return (
       <View style={styles.screen}>
          <Text></Text>
-         <Button title="Go back" onPress={() => props.navigation.popToTop()}></Button>
+         <Button title="Go back2" onPress={() => props.navigation.popToTop()}></Button>
       </View>
    )
 }
+
+MealDetailsScreen.navigationOptions = (navigationData) => ({
+   title: navigationData.navigation.getParam('title'),
+})
 
 const styles = StyleSheet.create({
    screen: {

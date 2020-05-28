@@ -6,7 +6,7 @@ import { CATEGORIES } from './../utils/data/dummy-data'
 const CategoriesScreen = (props) => {
    const renderGridItem = ({ item }) => <CategoryGridTile item={item} onSelect={() => props.navigation.navigate('CategoryMeals', { ...item })} />
 
-   return <FlatList numColumns={2} data={CATEGORIES} renderItem={renderGridItem}></FlatList>
+   return <FlatList style={styles.screen} numColumns={2} data={CATEGORIES} renderItem={renderGridItem}></FlatList>
 }
 
 CategoriesScreen.navigationOptions = {
@@ -15,9 +15,7 @@ CategoriesScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
    screen: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
+      backgroundColor: 'black',
    },
 })
 
