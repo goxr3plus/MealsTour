@@ -12,14 +12,9 @@ const CategoryMealsScreen = (props) => {
    )
 }
 
-CategoryMealsScreen.navigationOptions = (navigationData) => {
-   const title = navigationData.navigation.getParam('title')
-   return {
-      title,
-      headerStyle: { backgroundColor: Platform.OS == 'android' ? Colors.primaryColor : '' },
-      headerTintColor: Platform.OS == 'android' ? 'white' : Colors.primaryColor,
-   }
-}
+CategoryMealsScreen.navigationOptions = (navigationData) => ({
+   title: navigationData.navigation.getParam('title'),
+})
 
 const styles = StyleSheet.create({
    screen: {
