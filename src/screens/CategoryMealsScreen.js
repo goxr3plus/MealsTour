@@ -1,13 +1,19 @@
 import React from 'react'
-import { Button, StyleSheet, Text, View, Platform } from 'react-native'
-import Colors from '../utils/constants/Colors'
+import { Button, StyleSheet, Text, View } from 'react-native'
+import { CATEGORIES, MEALS } from '../utils/data/dummy-data'
+import { FlatList } from 'react-native-gesture-handler'
 
 const CategoryMealsScreen = (props) => {
+   const categoryId = props.navigation.getParam('id')
+   const displayedMeals = MEALS.filter((meal) => meal.categoryIds.includes(categoryId))
+
+   const constRenderItem = ({ item }) => {
+      return <Text>{item.title}</Text>
+   }
+
    return (
       <View style={styles.screen}>
-         <Text>{props.navigation.getParam('title')}</Text>
-         <Button title="Go to Meals Details!" onPress={() => props.navigation.navigate('MealDetails')}></Button>
-         <Button title="Go Back!" onPress={() => props.navigation.goBack()}></Button>
+         <FlatList data={displayedMeals} renderItem={constRenderItem} />
       </View>
    )
 }
