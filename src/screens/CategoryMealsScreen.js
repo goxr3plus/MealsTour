@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, View, Platform } from 'react-native'
+import Colors from '../constants/Colors'
 
 const CategoryMealsScreen = (props) => {
    return (
@@ -9,6 +10,15 @@ const CategoryMealsScreen = (props) => {
          <Button title="Go Back!" onPress={() => props.navigation.goBack()}></Button>
       </View>
    )
+}
+
+CategoryMealsScreen.navigationOptions = (navigationData) => {
+   const title = navigationData.navigation.getParam('title')
+   return {
+      title,
+      headerStyle: { backgroundColor: Platform.OS == 'android' ? Colors.primaryColor : '' },
+      headerTintColor: Platform.OS == 'android' ? 'white' : Colors.primaryColor,
+   }
 }
 
 const styles = StyleSheet.create({
