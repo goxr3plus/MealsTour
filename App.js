@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import * as Font from 'expo-font'
 import { AppLoading } from 'expo'
-import MealsNavigator from './src/navigation/MealsNavigator'
+import * as Font from 'expo-font'
+import React, { useState } from 'react'
 import { enableScreens } from 'react-native-screens'
+import MealsNavigator from './src/navigation/MealsNavigator'
 
 enableScreens()
 
