@@ -45,6 +45,15 @@ const FavoritesStackNavigator = createStackNavigator(
    }
 )
 
+const FiltersStackNavigator = createStackNavigator(
+   {
+      Filters: FiltersScreen,
+   },
+   {
+      defaultNavigationOptions: defaultStackNavigationOptions,
+   }
+)
+
 const tabScreenConfig = {
    Meals: {
       screen: MealsStackNavigator,
@@ -61,6 +70,15 @@ const tabScreenConfig = {
          tabBarIcon: (tabInfo) => <Ionicons name="ios-star" size={25} color={tabInfo.tintColor} />,
          tabBarColor: Colors.accentColor,
          tabBarLabel: Platform.OS == 'android' ? <Text style={{ fontFamily: 'open-sans-bold' }}>Favorites</Text> : 'Favorites',
+      },
+   },
+   Filters: {
+      screen: FiltersStackNavigator,
+      navigationOptions: {
+         tabBarLabel: 'Filters',
+         tabBarIcon: (tabInfo) => <Ionicons name="md-color-filter" size={25} color={tabInfo.tintColor} />,
+         tabBarColor: Colors.filtersColor,
+         tabBarLabel: Platform.OS == 'android' ? <Text style={{ fontFamily: 'open-sans-bold' }}>Filters</Text> : 'Filters',
       },
    },
 }
@@ -80,28 +98,19 @@ const bottomTabNavigator =
            },
         })
 
-const FiltersStackNavigator = createStackNavigator(
-   {
-      Filters: FiltersScreen,
-   },
-   {
-      defaultNavigationOptions: defaultStackNavigationOptions,
-   }
-)
+// const drawerNavigator = createDrawerNavigator(
+//    {
+//       MealsNav: { screen: bottomTabNavigator, navigationOptions: { drawerLabel: 'Meals' } },
+//       Filters: FiltersStackNavigator,
+//    },
+//    {
+//       contentOptions: {
+//          activeTintColor: Colors.accentColor,
+//          labelStyle: {
+//             fontFamily: 'open-sans-bold',
+//          },
+//       },
+//    }
+// )
 
-const drawerNavigator = createDrawerNavigator(
-   {
-      MealsNav: { screen: bottomTabNavigator, navigationOptions: { drawerLabel: 'Meals' } },
-      Filters: FiltersStackNavigator,
-   },
-   {
-      contentOptions: {
-         activeTintColor: Colors.accentColor,
-         labelStyle: {
-            fontFamily: 'open-sans-bold',
-         },
-      },
-   }
-)
-
-export default createAppContainer(drawerNavigator)
+export default createAppContainer(bottomTabNavigator)

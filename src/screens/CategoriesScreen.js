@@ -14,11 +14,11 @@ const CategoriesScreen = (props) => {
 CategoriesScreen.navigationOptions = (navData) => {
    return {
       title: 'Meal Categories',
-      headerLeft: () => (
-         <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
-            <Item title="Menu" iconName="ios-menu" iconSize={100} onPress={() => navData.navigation.toggleDrawer()}></Item>
-         </HeaderButtons>
-      ),
+      // headerLeft: () => (
+      //    <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+      //       <Item title="Menu" iconName="ios-menu" iconSize={100} onPress={() => navData.navigation.toggleDrawer()}></Item>
+      //    </HeaderButtons>
+      // ),
    }
 }
 
