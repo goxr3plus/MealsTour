@@ -3,7 +3,7 @@ import { FlatList, StyleSheet, View } from 'react-native'
 import MealItem from './MealItem'
 
 const MealList = (props) => {
-   const constRenderItem = ({ item }) => <MealItem item={item} onSelectMeal={() => props.navigation.navigate('MealDetails', { ...item })} />
+   const constRenderItem = ({ item }) => <MealItem item={item} onSelectMeal={() => props.navigation.navigate('MealDetails', { item })} />
 
    return (
       <View style={styles.list}>

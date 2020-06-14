@@ -4,6 +4,7 @@ import DefaultText from './DefaultText'
 
 const MealItem = (props) => {
    let TouchableComp = TouchableOpacity
+   const meal = props.item
 
    // if (Platform.OS == 'android' && Platform.Version > 21) {
    //    TouchableComp = TouchableNativeFeedback //Native Android Ripple Effect
@@ -12,18 +13,18 @@ const MealItem = (props) => {
    return (
       <View style={styles.container}>
          <TouchableComp style={{ flex: 1 }} onPress={props.onSelectMeal}>
-            <View style={[styles.mealRow, styles.mealHeader]}>
-               <ImageBackground style={styles.bgImage} source={{ uri: props.item.imageUrl }}>
+            <View style={[styles.mealHeader]}>
+               <ImageBackground style={styles.bgImage} source={{ uri: meal.imageUrl }}>
                   <View>
                      <View style={styles.titleContainer}>
                         <Text style={styles.title} numberOfLines={1}>
-                           {props.item.title}
+                           {meal.title}
                         </Text>
                      </View>
-                     <View style={[styles.mealRow, styles.mealDetail]}>
-                        <DefaultText style={styles.detail}>{props.item.duration}m</DefaultText>
-                        <DefaultText style={styles.detail}>{props.item.complexity.toUpperCase()}</DefaultText>
-                        <DefaultText style={styles.detail}>{props.item.affordability.toUpperCase()}</DefaultText>
+                     <View style={[styles.mealDetails]}>
+                        <DefaultText style={styles.detail}>{meal.duration}m</DefaultText>
+                        <DefaultText style={styles.detail}>{meal.complexity.toUpperCase()}</DefaultText>
+                        <DefaultText style={styles.detail}>{meal.affordability.toUpperCase()}</DefaultText>
                      </View>
                   </View>
                </ImageBackground>
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
    mealHeader: {
       height: '100%',
    },
-   mealDetail: {
+   mealDetails: {
       paddingHorizontal: 10,
       flexDirection: 'row',
       justifyContent: 'space-between',
