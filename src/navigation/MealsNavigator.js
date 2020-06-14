@@ -9,13 +9,15 @@ import CategoryMealsScreen from './../screens/CategoryMealsScreen'
 import MealDetailsScreen from './../screens/MealDetailsScreen'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
+import { createDrawerNavigator } from 'react-navigation-drawer'
+import FiltersScreen from '../screens/FiltersScreen'
 
 const defaultStackNavigationOptions = {
    headerStyle: { backgroundColor: Platform.OS == 'android' ? Colors.primaryColor : '' },
    headerTintColor: Platform.OS == 'android' ? 'white' : Colors.primaryColor,
 }
 
-/* Navigate between categories-categorymeals-mealdetails */
+/* Navigate between categories-categoryMeals-mealDetails */
 const MealsNavigator = createStackNavigator(
    {
       Categories: CategoriesScreen,
@@ -29,7 +31,7 @@ const MealsNavigator = createStackNavigator(
    }
 )
 
-/* Navigate between favorites-mealdetails */
+/* Navigate between favorites-mealDetails */
 const FavoritesNavigator = createStackNavigator(
    {
       Favorites: FavoritesScreen,
@@ -72,4 +74,18 @@ const MealsFavTabNavigator =
            },
         })
 
-export default createAppContainer(MealsFavTabNavigator)
+const FiltersNavigator = createStackNavigator(
+   {
+      Filters: FiltersScreen,
+   },
+   {
+      defaultNavigationOptions: defaultStackNavigationOptions,
+   }
+)
+
+const MainNavigator = createDrawerNavigator({
+   MealsNav: MealsFavTabNavigator,
+   Filters: FiltersNavigator,
+})
+
+export default createAppContainer(MainNavigator)
