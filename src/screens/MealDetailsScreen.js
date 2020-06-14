@@ -13,22 +13,24 @@ const ListItem = (props) => (
 const MealDetailsScreen = (props) => {
    const meal = props.navigation.getParam('item')
    return (
-      <ScrollView>
+      <View style={styles.container}>
          <Image source={{ uri: meal.imageUrl }} style={styles.image}></Image>
          <View style={[styles.mealDetails]}>
             <DefaultText style={styles.detail}>{meal.duration}m</DefaultText>
             <DefaultText style={styles.detail}>{meal.complexity.toUpperCase()}</DefaultText>
             <DefaultText style={styles.detail}>{meal.affordability.toUpperCase()}</DefaultText>
          </View>
-         <Text style={styles.title}>Ingredients</Text>
-         {meal.ingredients.map((ingredient) => (
-            <ListItem key={`ingredient_${ingredient}`}>{ingredient}</ListItem>
-         ))}
-         <Text style={styles.title}>Steps</Text>
-         {meal.steps.map((step) => (
-            <ListItem key={`step_${step}`}>{step}</ListItem>
-         ))}
-      </ScrollView>
+         <ScrollView>
+            <Text style={styles.title}>Ingredients</Text>
+            {meal.ingredients.map((ingredient) => (
+               <ListItem key={`ingredient_${ingredient}`}>{ingredient}</ListItem>
+            ))}
+            <Text style={styles.title}>Steps</Text>
+            {meal.steps.map((step) => (
+               <ListItem key={`step_${step}`}>{step}</ListItem>
+            ))}
+         </ScrollView>
+      </View>
    )
 }
 
@@ -45,9 +47,12 @@ MealDetailsScreen.navigationOptions = (navigationData) => {
 }
 
 const styles = StyleSheet.create({
+   container: {
+      flex: 1,
+   },
    image: {
       width: '100%',
-      height: 250,
+      height: 200,
    },
    details: {
       flexDirection: 'row',
