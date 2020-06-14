@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View, Platform, TouchableNativeFeedback, ImageBackground } from 'react-native'
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const CategoryGridTile = (props) => {
    let TouchableComp = TouchableOpacity

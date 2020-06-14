@@ -11,7 +11,8 @@ const MealDetailsScreen = (props) => {
 }
 
 MealDetailsScreen.navigationOptions = (navigationData) => ({
-   title: navigationData.navigation.getParam('title'),
+   headerTitle: navigationData.navigation.getParam('title'),
+   headerRight: () => <Text>Fav!</Text>,
 })
 
 const styles = StyleSheet.create({
