@@ -8,6 +8,13 @@
 
 ---
 
+#### How to run
+
+1) npm install
+2) npm start 
+
+3) Use expo application from your android phone and scan the code [download](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en)
+
 
 #### Demo Images
 
