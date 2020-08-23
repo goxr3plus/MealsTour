@@ -22,7 +22,7 @@ Keep in mind you need to have Expo-Cli globally on your computer :
 
 >npm i -g expo-cli
 
-Just download the repository and : 
+Just download the repository and :  
 
 >npm start
 
