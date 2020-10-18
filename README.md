@@ -16,7 +16,7 @@ React Native: [Link](https://reactnative.dev/docs/getting-started)
 
 React Hooks: [Link](https://reactjs.org/docs/hooks-reference.html)  
 
-### HOW TO RUN
+### HOW TO RUN 
  
 Keep in mind you need to have Expo-Cli globally on your computer :   
 
