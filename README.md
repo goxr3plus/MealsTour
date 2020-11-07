@@ -3,7 +3,7 @@
 <p align="center"> 
 <sup>
 <b> Find your favourite recipes , enjoy the best food :) </b>     
-</sup>     
+</sup>      
 </p>           
            
 ---                  
