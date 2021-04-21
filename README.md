@@ -12,7 +12,7 @@
     
 Expo : [Link](https://docs.expo.io/guides/)       
      
-React Native: [Link](https://reactnative.dev/docs/getting-started)
+React Native: [Link](https://reactnative.dev/docs/getting-started) 
  
 React Hooks: [Link](https://reactjs.org/docs/hooks-reference.html)   
  
