@@ -1,7 +1,7 @@
 ---
 <h3 align="center" > 🍤🍨🍇🍷 MealsTour 🍷🍇🍨🍤</h3> 
 <p align="center">  
-<sup> 
+<sup>  
 <b> Find your favourite recipes , enjoy the best food :) </b>       
 </sup>            
 </p>                     
