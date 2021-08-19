@@ -20,7 +20,7 @@ React Hooks: [Link](https://reactjs.org/docs/hooks-reference.html)
   
 Keep in mind you need to have Expo-Cli globally on your computer :   
  
->npm i -g expo-cli
+>npm i -g expo-cli 
   
 Just download the repository and :     
  
